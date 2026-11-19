@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =====================================================
+   WD.PROJECT - GLOBAL STYLES
+   Industrial Dark B2B Aesthetic (Anti-AI Human-Crafted)
+   ===================================================== */
+
+:root {
+  --bg-primary: #0B1120;
+  --bg-alt: #0E1526;
+  --brand-orange: #F97316;
+  --brand-orange-dark: #EA580C;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: #F8FAFC;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #0B1120; }
+::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #F97316; }
+
+/* Selection */
+::selection {
+  background-color: #F97316;
+  color: white;
+}
+
+/* Grid Background Pattern */
+.grid-pattern {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Hero gradient */
+.hero-gradient {
+  background: radial-gradient(circle at 50% 20%, rgba(249, 115, 22, 0.12) 0%, rgba(15, 23, 42, 0.8) 60%, #0B1120 100%);
+}
+
+/* Glass Card */
+.glass-card {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.25s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(249, 115, 22, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -6px rgba(0, 0, 0, 0.5);
+}
+
+/* Tab buttons */
+.tab-active {
+  background-color: #F97316;
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(249, 115, 22, 0.35);
+}
+.tab-inactive {
+  background-color: rgba(30, 41, 59, 0.6);
+  color: #94A3B8;
+}
+.tab-inactive:hover {
+  color: #F8FAFC;
+  background-color: rgba(51, 65, 85, 0.8);
+}
+
+/* Toast animation */
+@keyframes slideUp {
+  from { transform: translateY(8px); opacity: 0; }
+  to   { transform: translateY(0);   opacity: 1; }
+}
+.toast-enter { animation: slideUp 0.2s ease forwards; }
+
+/* Spinner */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+.animate-spin { animation: spin 0.8s linear infinite; }
+
