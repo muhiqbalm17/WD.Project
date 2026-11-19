@@ -1,0 +1,20 @@
+{
+  "name": "wd-project-makassar",
+  "version": "1.0.0",
+  "description": "Website Resmi WD.Project - Spesialis Fabrikasi Logam Presisi & Maintenance Alat Berat Makassar",
+  "private": true,
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "keywords": [
+    "fabrikasi",
+    "maintenance",
+    "vapor-blasting",
+    "sandblasting",
+    "pengelasan",
+    "makassar"
+  ],
+  "author": "WD.Project",
+  "license": "ISC"
+}
+

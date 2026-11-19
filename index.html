@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>WD.Project - Spesialis Fabrikasi & Maintenance Makassar</title>
+  <meta name="description" content="Jasa Fabrikasi Logam, Pengelasan Presisi, Vapor Blasting, Sandblasting, Pagar, Kanopi, serta Maintenance Mobil, Alat Berat & Genset di Makassar.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              orange: '#F97316',
+              orangeDark: '#EA580C',
+              orangeLight: '#FFEDD5',
+              slate: '#0F172A',
+              slateCard: '#1E293B',
+              slateMuted: '#334155',
+              grayLight: '#F8FAFC'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Styling Dasar & Anti-AI Human-Crafted Aesthetic */
+    body {
+      background-color: #0B1120;
+      color: #F8FAFC;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+    }
+    .custom-gradient-hero {
+      background: radial-gradient(circle at 50% 20%, rgba(249, 115, 22, 0.12) 0%, rgba(15, 23, 42, 0.8) 60%, #0B1120 100%);
+    }
+    .grid-pattern {
+      background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+    .glass-card {
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.25s ease;
+    }
+    .glass-card:hover {
+      border-color: rgba(249, 115, 22, 0.4);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px -6px rgba(0, 0, 0, 0.5);
+    }
+    .tab-active {
+      background-color: #F97316;
+      color: #FFFFFF;
+      box-shadow: 0 4px 14px rgba(249, 115, 22, 0.35);
+    }
+    .tab-inactive {
+      background-color: rgba(30, 41, 59, 0.6);
+      color: #94A3B8;
+    }
+    .tab-inactive:hover {
+      color: #F8FAFC;
+      background-color: rgba(51, 65, 85, 0.8);
+    }
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0B1120;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #F97316;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-brand-orange selection:text-white">
+
+  <!-- ================= TOP NOTIFICATION BAR ================= -->
+  <div class="bg-gradient-to-r from-brand-slate via-brand-slateCard to-brand-slate border-b border-white/10 text-xs py-2 px-4 text-slate-300">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center space-x-3">
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-brand-orange/20 text-brand-orange border border-brand-orange/30">
+          MAKASSAR & SULSEL
+        </span>
+        <span class="hidden sm:inline">Jl. Balang Turungan, Paccerakkang, Kec. Biringkanaya</span>
+      </div>
+      <div class="flex items-center space-x-4">
+        <span class="hidden md:inline">Jam Kerja: Sen - Sab 08:00 - 17:00 WITA</span>
+        <a href="https://wa.me/6282292489480" target="_blank" class="text-brand-orange hover:text-white font-semibold flex items-center transition-colors">
+          <svg class="w-3.5 h-3.5 mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2z"/></svg>
+          0822-9248-9480
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= HEADER & NAVBAR ================= -->
+  <header class="sticky top-0 z-50 bg-[#0B1120]/90 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo Resmi WD.Project -->
+        <a href="#beranda" class="flex items-center space-x-3 group py-2">
+          <div class="bg-white px-2.5 py-1.5 rounded-lg border border-white/20 shadow-sm flex items-center justify-center">
+            <!-- Menampilkan file logo.png dengan fallback visual otomatis -->
+            <img src="assets/logo.png" alt="WD.Project Logo" class="h-9 w-auto object-contain" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'font-extrabold text-xl text-black\'>W<span class=\'text-orange-500\'>D</span>.Project</span>';">
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium text-slate-300">
+          <a href="#beranda" class="hover:text-brand-orange transition-colors">Beranda</a>
+          <a href="#divisi-layanan" class="hover:text-brand-orange transition-colors">Layanan Unggulan</a>
+          <a href="#keunggulan" class="hover:text-brand-orange transition-colors">Mengapa Kami</a>
+          <a href="#portofolio" class="hover:text-brand-orange transition-colors">Portofolio</a>
+          <a href="#alur-kerja" class="hover:text-brand-orange transition-colors">Alur Kerja</a>
+          <a href="#lokasi-kontak" class="hover:text-brand-orange transition-colors">Lokasi & Workshop</a>
+        </nav>
+
+        <!-- CTA Header Button -->
+        <div class="hidden sm:flex items-center space-x-3">
+          <a href="#form-rfq" class="inline-flex items-center px-4 py-2.5 rounded-lg text-sm font-bold bg-brand-orange hover:bg-brand-orangeDark text-white shadow-lg shadow-brand-orange/20 transition-all hover:-translate-y-0.5">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            Minta Penawaran (RFQ)
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="flex lg:hidden">
+          <button id="mobile-menu-btn" type="button" class="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 focus:outline-none" aria-label="Toggle Navigation">
+            <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden border-b border-white/10 bg-[#0F172A] px-4 pt-2 pb-6 space-y-3">
+      <a href="#beranda" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-brand-orange">Beranda</a>
+      <a href="#divisi-layanan" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-brand-orange">Layanan Unggulan</a>
+      <a href="#keunggulan" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-brand-orange">Mengapa Kami</a>
+      <a href="#portofolio" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-brand-orange">Portofolio</a>
+      <a href="#alur-kerja" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-brand-orange">Alur Kerja</a>
+      <a href="#lokasi-kontak" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-brand-orange">Lokasi & Kontak</a>
+      <div class="pt-3">
+        <a href="#form-rfq" class="mobile-nav-link w-full inline-flex justify-center items-center px-4 py-3 rounded-lg text-sm font-bold bg-brand-orange text-white">
+          Minta Penawaran (RFQ)
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section id="beranda" class="relative pt-12 pb-20 md:pt-20 md:pb-32 custom-gradient-hero grid-pattern overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="max-w-3xl">
+        <!-- Badge Akreditasi / Lokasi -->
+        <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-slate-800/80 border border-slate-700 text-xs font-semibold text-slate-300 mb-6 backdrop-blur">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>Workshop Resmi & On-Site Service • Biringkanaya, Makassar</span>
+        </div>
+
+        <!-- Main Headline -->
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight mb-6">
+          Spesialis <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-amber-300">Fabrikasi Presisi</span> &amp; Maintenance Alat Berat.
+        </h1>
+
+        <!-- Sub-headline -->
+        <p class="text-base sm:text-lg text-slate-300 mb-8 leading-relaxed">
+          Mitra teknik andalan industri dan komersial di Sulawesi Selatan. Menghadirkan pengerjaan pengelasan bersertifikasi, teknologi vapor &amp; sandblasting pembersih kerak tuntas, hingga perawatan armada mobil, genset, dan alat berat.
+        </p>
+
+        <!-- CTA Action Buttons -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-12">
+          <a href="#form-rfq" class="inline-flex justify-center items-center px-7 py-3.5 rounded-lg text-base font-bold bg-brand-orange hover:bg-brand-orangeDark text-white shadow-xl shadow-brand-orange/25 transition-all hover:-translate-y-0.5">
+            Ajukan Estimasi Harga (RFQ)
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+          <a href="https://wa.me/6282292489480?text=Halo%20WD.Project,%20saya%20ingin%20konsultasi%20layanan%20fabrikasi/maintenance." target="_blank" class="inline-flex justify-center items-center px-7 py-3.5 rounded-lg text-base font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition-all">
+            <svg class="w-5 h-5 mr-2 text-emerald-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2z"/></svg>
+            Konsultasi WhatsApp Langsung
+          </a>
+        </div>
+
+        <!-- 3 Pilar Kepercayaan Kilat -->
+        <div class="grid grid-cols-3 gap-4 pt-6 border-t border-white/10 text-slate-400 text-xs sm:text-sm">
+          <div>
+            <div class="text-white font-bold text-lg sm:text-xl">100%</div>
+            <div>Standar Presisi Uji</div>
+          </div>
+          <div>
+            <div class="text-white font-bold text-lg sm:text-xl">Dual Divisi</div>
+            <div>Fabrikasi &amp; Maintenance</div>
+          </div>
+          <div>
+            <div class="text-white font-bold text-lg sm:text-xl">Fast On-Site</div>
+            <div>Area Makassar &amp; Sekitarnya</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= STATISTIK / NILAI UTAMA (4 GRID CARDS) ================= -->
+  <section id="keunggulan" class="py-16 bg-[#0E1526] border-y border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h2 class="text-xs uppercase tracking-widest text-brand-orange font-bold mb-2">STANDAR KUALITAS WORKSHOP</h2>
+        <p class="text-2xl sm:text-3xl font-extrabold text-white">Mengapa Perusahaan &amp; Kontraktor Memilih WD.Project?</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Card 1 -->
+        <div class="glass-card p-6 rounded-xl">
+          <div class="w-12 h-12 rounded-lg bg-brand-orange/15 text-brand-orange flex items-center justify-center mb-5 border border-brand-orange/20">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Vapor &amp; Sandblasting Modern</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Pembersihan kerak korosi, cat lama, dan restorasi logam menggunakan teknologi wet &amp; dry blasting presisi tanpa merusak struktur dasar material.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="glass-card p-6 rounded-xl">
+          <div class="w-12 h-12 rounded-lg bg-amber-500/15 text-amber-400 flex items-center justify-center mb-5 border border-amber-500/20">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Pengelasan Mutu Tinggi</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Keahlian las MIG, TIG, dan MMA untuk konstruksi tangki, pipa presisi, kanopi kokoh, tralis elegan, dan pagar industri yang berdaya tahan lama.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="glass-card p-6 rounded-xl">
+          <div class="w-12 h-12 rounded-lg bg-emerald-500/15 text-emerald-400 flex items-center justify-center mb-5 border border-emerald-500/20">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Maintenance Alat Berat &amp; Genset</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Penanganan overhaul mesin industri, perbaikan sistem hidrolik, kelistrikan genset pabrik, dan servis preventif kendaraan operasional.
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="glass-card p-6 rounded-xl">
+          <div class="w-12 h-12 rounded-lg bg-blue-500/15 text-blue-400 flex items-center justify-center mb-5 border border-blue-500/20">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Tim Lapangan Responsif</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Dukungan teknisi panggilan langsung ke lokasi proyek Anda di seluruh area Makassar, Maros, Gowa, dan sekitarnya saat terjadi kendala darurat.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= DUA DIVISI UTAMA (INTERACTIVE TABS) ================= -->
+  <section id="divisi-layanan" class="py-20 bg-[#0B1120]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <span class="text-xs uppercase tracking-widest text-brand-orange font-bold">KATALOG SPESIALISASI</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">Layanan Dua Divisi Terpadu</h2>
+        </div>
+        
+        <!-- Tab Selector Buttons -->
+        <div class="mt-6 md:mt-0 inline-flex p-1.5 rounded-xl bg-slate-900 border border-slate-800 shadow-inner">
+          <button id="tab-btn-fabrikasi" onclick="switchDivision('fabrikasi')" class="tab-active px-5 py-2.5 rounded-lg text-sm font-bold transition-all flex items-center">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+            Divisi Fabrikasi
+          </button>
+          <button id="tab-btn-maintenance" onclick="switchDivision('maintenance')" class="tab-inactive px-5 py-2.5 rounded-lg text-sm font-bold transition-all flex items-center">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            Divisi Maintenance
+          </button>
+        </div>
+      </div>
+
+      <!-- KONTEN TAB: DIVISI FABRIKASI -->
+      <div id="content-fabrikasi" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- F1: Vapor Blasting -->
+        <div class="glass-card rounded-xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 text-xs font-bold rounded bg-brand-orange/20 text-brand-orange border border-brand-orange/30">UNGGULAN WORKSHOP</span>
+              <span class="text-xs text-slate-400">Restorasi Logam</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Vapor Blasting Presisi (Wet Blasting)</h3>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+              Metode pembersihan permukaan menggunakan media mikro bertekanan air terkontrol. Membersihkan kerak, oksidasi, dan kotoran membandel hingga ke celah sempit tanpa mengikis dimensi atau ulir baut mesin.
+            </p>
+            <ul class="text-xs text-slate-400 space-y-1.5 mb-6">
+              <li class="flex items-center"><span class="text-brand-orange mr-2">✓</span> Permukaan satin mengkilap seperti baru</li>
+              <li class="flex items-center"><span class="text-brand-orange mr-2">✓</span> Sangat aman untuk blok mesin, karburator &amp; velg</li>
+              <li class="flex items-center"><span class="text-brand-orange mr-2">✓</span> Bebas debu kering berbahaya</li>
+            </ul>
+          </div>
+          <button onclick="pilihLayananRFQ('Fabrikasi', 'Vapor Blasting Presisi')" class="w-full py-2.5 px-4 rounded-lg text-sm font-semibold bg-slate-800 hover:bg-brand-orange text-white border border-slate-700 hover:border-brand-orange transition-all">
+            Minta Penawaran Vapor Blasting
+          </button>
+        </div>
+
+        <!-- F2: Sandblasting -->
+        <div class="glass-card rounded-xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 text-xs font-bold rounded bg-amber-500/20 text-amber-400 border border-amber-500/30">HEAVY DUTY</span>
+              <span class="text-xs text-slate-400">Surface Prep</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Sandblasting Industri</h3>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+              Pengikisan kerak karat berat, cat lama, dan kerak manufaktur pada struktur baja besar, rangka alat berat, tangki penampung, dan chassis sebelum proses pelapisan cat anti-karat (protective coating).
+            </p>
+            <ul class="text-xs text-slate-400 space-y-1.5 mb-6">
+              <li class="flex items-center"><span class="text-brand-orange mr-2">✓</span> Standar kebersihan profil Sa 2.5</li>
+              <li class="flex items-center"><span class="text-brand-orange mr-2">✓</span> Daya rekat cat baru meningkat 300%</li>
+              <li class="flex items-center"><span class="text-brand-orange mr-2">✓</span> Kapasitas workshop &amp; pengerjaan on-site</li>
+            </ul>
+          </div>
+          <button onclick="pilihLayananRFQ('Fabrikasi', 'Sandblasting Industri')" class="w-full py-2.5 px-4 rounded-lg text-sm font-semibold bg-slate-800 hover:bg-brand-orange text-white border border-slate-700 hover:border-brand-orange transition-all">
+            Minta Penawaran Sandblasting
+          </button>
+        </div>
+
+        <!-- F3: Pengelasan Bersertifikat -->
+        <div class="glass-card rounded-xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 text-xs font-bold rounded bg-blue-500/20 text-blue-400 border border-blue-500/30">WELDER AHLI</span>
+              <span class="text-xs text-slate-400">MIG / TIG / MMA</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Pengelasan Struktur &amp; Fabrikasi</h3>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+              Pengerjaan sambungan logam berdaya tahan tinggi untuk instalasi industri, perakitan rangka besi, tangki penyimpanan cairan, dan konstruksi struktural dengan penetrasi las yang matang.
+            </p>
+            <ul class="text-xs text-slate-400 space-y-1.5 mb-6">
+              <li class="flex items-center"><span class="text-brand-orange mr-2">✓</span> Las TIG (Argon) untuk stainless &amp; aluminium</li>
+              <li class="flex items-center"><span class="text-brand-orange mr-2">✓</span> Las MIG/CO2 untuk rangka baja kecepatan tinggi</li>
+              <li class="flex items-center"><span class="text-brand-orange mr-2">✓</span> Hasil rapi dan lolos uji visual ketat</li>
+            </ul>
+          </div>
+          <button onclick="pilihLayananRFQ('Fabrikasi', 'Pengelasan Struktur & Fabrikasi')" class="w-full py-2.5 px-4 rounded-lg text-sm font-semibold bg-slate-800 hover:bg-brand-orange text-white border border-slate-700 hover:border-brand-orange transition-all">
+            Minta Penawaran Pengelasan
+          </button>
+        </div>
+
+        <!-- F4: Kanopi Modern & Heavy Duty -->
+        <div class="glass-card rounded-xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 text-xs font-bold rounded bg-slate-700 text-slate-200">ARSITEKTURAL</span>
+              <span class="text-xs text-slate-400">Hunian &amp; Gudang</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Fabrikasi Kanopi Baja &amp; Besi</h3>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+              Pembuatan kanopi carport rumah tinggal, kanopi loading dock gudang pabrik, dengan variasi atap spandek peredam, alderon uPVC dobel layer, solarflat, hingga tempered glass.
+            </p>
+            <ul class="text-xs text-slate-400 space-y-1.5 mb-6">
+              <li class="flex items-center"><span class="text-brand-orange mr-2">✓</span> Rangka besi hollow tebal bergaransi</li>
+              <li class="flex items-center"><span class="text-brand-orange mr-2">✓</span> Cat dasar epoxy anti karat menyeluruh</li>
+              <li class="flex items-center"><span class="text-brand-orange mr-2">✓</span> Desain bebas request sesuai model arsitektur</li>
+            </ul>
+          </div>
+          <button onclick="pilihLayananRFQ('Fabrikasi', 'Fabrikasi Kanopi Baja & Besi')" class="w-full py-2.5 px-4 rounded-lg text-sm font-semibold bg-slate-800 hover:bg-brand-orange text-white border border-slate-700 hover:border-brand-orange transition-all">
+            Minta Penawaran Kanopi
+          </button>
+        </div>
+
+        <!-- F5: Pagar Minimalis & Industri -->
+        <div class="glass-card rounded-xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 text-xs font-bold rounded bg-slate-700 text-slate-200">ARSITEKTURAL</span>
+              <span class="text-xs text-slate-400">Keamanan &amp; Estetika</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Pagar &amp; Gerbang Otomatis / Manual</h3>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+              Pagar dorong minimalis, pagar lipat, pintu gerbang workshop berbobot besar, serta pagar pengaman industri dengan pergerakan roda bearing presisi yang enteng digeser.
+            </p>
+            <ul class="text-xs text-slate-400 space-y-1.5 mb-6">
+              <li class="flex items-center"><span class="text-brand-orange mr-2">✓</span> Desain minimalis modern &amp; expanded metal</li>
+              <li class="flex items-center"><span class="text-brand-orange mr-2">✓</span> Finishing cat duco tahan cuaca ekstrem Makassar</li>
+              <li class="flex items-center"><span class="text-brand-orange mr-2">✓</span> Sistem engsel &amp; rel heavy duty anti anjlok</li>
+            </ul>
+          </div>
+          <button onclick="pilihLayananRFQ('Fabrikasi', 'Pagar & Gerbang Industri')" class="w-full py-2.5 px-4 rounded-lg text-sm font-semibold bg-slate-800 hover:bg-brand-orange text-white border border-slate-700 hover:border-brand-orange transition-all">
+            Minta Penawaran Pagar
+          </button>
+        </div>
+
+        <!-- F6: Tralis Jendela & Pengaman Besi -->
+        <div class="glass-card rounded-xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 text-xs font-bold rounded bg-slate-700 text-slate-200">PROTEKSI</span>
+              <span class="text-xs text-slate-400">Gedung &amp; Rumah</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Tralis Jendela &amp; Pengaman Khusus</h3>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+              Tralis jendela besi tempa/minimalis, kerangkeng pengaman outdoor AC, pintu kassa nyamuk baja, dan railing tangga/balkon yang kokoh, rapi, dan presisi pada sudut-sudutnya.
+            </p>
+            <ul class="text-xs text-slate-400 space-y-1.5 mb-6">
+              <li class="flex items-center"><span class="text-brand-orange mr-2">✓</span> Ukuran presisi diukur langsung di lokasi</li>
+              <li class="flex items-center"><span class="text-brand-orange mr-2">✓</span> Pola kerapatan aman dan estetis</li>
+              <li class="flex items-center"><span class="text-brand-orange mr-2">✓</span> Pemasangan rapi tanpa merusak kusen</li>
+            </ul>
+          </div>
+          <button onclick="pilihLayananRFQ('Fabrikasi', 'Tralis Jendela & Pengaman Khusus')" class="w-full py-2.5 px-4 rounded-lg text-sm font-semibold bg-slate-800 hover:bg-brand-orange text-white border border-slate-700 hover:border-brand-orange transition-all">
+            Minta Penawaran Tralis
+          </button>
+        </div>
+
+      </div>
+
+      <!-- KONTEN TAB: DIVISI MAINTENANCE (Hidden by default) -->
+      <div id="content-maintenance" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- M1: Maintenance Alat Berat -->
+        <div class="glass-card rounded-xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 text-xs font-bold rounded bg-brand-orange/20 text-brand-orange border border-brand-orange/30">ALAT BERAT</span>
+              <span class="text-xs text-slate-400">Industri &amp; Tambang</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Overhaul &amp; Maintenance Alat Berat</h3>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+              Layanan perbaikan hidrolik bocor, penggantian hose, servis cylinder boom/arm, undercarriage track, dan overhaul mesin diesel untuk excavator, forklift pabrik, dan wheel loader.
+            </p>
+            <ul class="text-xs text-slate-400 space-y-1.5 mb-6">
+              <li class="flex items-center"><span class="text-brand-orange mr-2">✓</span> Diagnosa tekanan sistem hidrolik</li>
+              <li class="flex items-center"><span class="text-brand-orange mr-2">✓</span> Servis komponen transmisi &amp; final drive</li>
+              <li class="flex items-center"><span class="text-brand-orange mr-2">✓</span> Garansi fungsi pasca perbaikan</li>
+            </ul>
+          </div>
+          <button onclick="pilihLayananRFQ('Maintenance', 'Overhaul & Maintenance Alat Berat')" class="w-full py-2.5 px-4 rounded-lg text-sm font-semibold bg-slate-800 hover:bg-brand-orange text-white border border-slate-700 hover:border-brand-orange transition-all">
+            Minta Penawaran Servis Alat Berat
+          </button>
+        </div>
+
+        <!-- M2: Perawatan & Tuning Genset -->
+        <div class="glass-card rounded-xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 text-xs font-bold rounded bg-amber-500/20 text-amber-400 border border-amber-500/30">DAYA LISTRIK</span>
+              <span class="text-xs text-slate-400">Standby &amp; Prime</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Servis &amp; Maintenance Genset Industri</h3>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+              Perawatan rutin berkala genset kapasitas 10 kVA hingga 500+ kVA. Pembersihan sistem bahan bakar, kalibrasi governor/AVR, pergantian oli filter, hingga simulasi pengetesan beban (load-bank test).
+            </p>
+            <ul class="text-xs text-slate-400 space-y-1.5 mb-6">
+              <li class="flex items-center"><span class="text-brand-orange mr-2">✓</span> Mencegah kegagalan start saat listrik PLN padam</li>
+              <li class="flex items-center"><span class="text-brand-orange mr-2">✓</span> Pengecekan otomatis panel ATS / AMF</li>
+              <li class="flex items-center"><span class="text-brand-orange mr-2">✓</span> Kontrak maintenance berkala bulanan/tahunan</li>
+            </ul>
+          </div>
+          <button onclick="pilihLayananRFQ('Maintenance', 'Servis & Maintenance Genset Industri')" class="w-full py-2.5 px-4 rounded-lg text-sm font-semibold bg-slate-800 hover:bg-brand-orange text-white border border-slate-700 hover:border-brand-orange transition-all">
+            Minta Penawaran Servis Genset
+          </button>
+        </div>
+
+        <!-- M3: Servis Mobil & Armada Operasional -->
+        <div class="glass-card rounded-xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 text-xs font-bold rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">KENDARAAN</span>
+              <span class="text-xs text-slate-400">Fleet &amp; Pribadi</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Perbaikan Mobil &amp; Armada Usaha</h3>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+              Penanganan menyeluruh mulai dari tune-up mesin injeksi/diesel common-rail, servis rem &amp; suspensi kaki-kaki, overhaul gearbox manual/matic, hingga penanganan kelistrikan mobil operasional.
+            </p>
+            <ul class="text-xs text-slate-400 space-y-1.5 mb-6">
+              <li class="flex items-center"><span class="text-brand-orange mr-2">✓</span> Paket servis berkala armada logistik/perusahaan</li>
+              <li class="flex items-center"><span class="text-brand-orange mr-2">✓</span> Penggantian suku cadang orisinil &amp; bergaransi</li>
+              <li class="flex items-center"><span class="text-brand-orange mr-2">✓</span> Waktu pengerjaan efisien meminimalkan downtime</li>
+            </ul>
+          </div>
+          <button onclick="pilihLayananRFQ('Maintenance', 'Perbaikan Mobil & Armada Usaha')" class="w-full py-2.5 px-4 rounded-lg text-sm font-semibold bg-slate-800 hover:bg-brand-orange text-white border border-slate-700 hover:border-brand-orange transition-all">
+            Minta Penawaran Servis Mobil
+          </button>
+        </div>
+
+        <!-- M4: On-Site Emergency Repair -->
+        <div class="glass-card rounded-xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 text-xs font-bold rounded bg-red-500/20 text-red-400 border border-red-500/30">TANGGAP DARURAT</span>
+              <span class="text-xs text-slate-400">Panggilan Lapangan</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Layanan Perbaikan On-Site (Panggilan)</h3>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+              Ketika unit mesin pabrik, genset, atau alat berat tidak dapat dipindahkan ke workshop, tim mekanik spesialis kami siap datang langsung membawa toolkit diagnosa ke lokasi Anda.
+            </p>
+            <ul class="text-xs text-slate-400 space-y-1.5 mb-6">
+              <li class="flex items-center"><span class="text-brand-orange mr-2">✓</span> Cakupan Makassar, Biringkanaya, Maros, Gowa</li>
+              <li class="flex items-center"><span class="text-brand-orange mr-2">✓</span> Diagnosa cepat di tempat pengerjaan</li>
+              <li class="flex items-center"><span class="text-brand-orange mr-2">✓</span> Hotline WhatsApp responsif 24 jam</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/6282292489480?text=Halo%20WD.Project,%20saya%20membutuhkan%20layanan%20mekanik%20darurat%20di%20lokasi%20saya." target="_blank" class="w-full py-2.5 px-4 rounded-lg text-sm font-semibold bg-brand-orange hover:bg-brand-orangeDark text-white text-center transition-all block">
+            Panggil Teknisi ke Lokasi Sekarang
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= PORTOFOLIO & GALERI PENGERJAAN ================= -->
+  <section id="portofolio" class="py-20 bg-[#0E1526] border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <span class="text-xs uppercase tracking-widest text-brand-orange font-bold">REKAM JEJAK WORKSHOP</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">Galeri Proyek &amp; Hasil Pengerjaan</h2>
+          <p class="text-slate-400 text-sm mt-2 max-w-xl">
+            Bukti nyata dedikasi presisi teknis, kerapian pengerjaan las, kebersihan blasting, dan keandalan perbaikan mesin oleh tim WD.Project.
+          </p>
+        </div>
+
+        <!-- Filter Kategori Portofolio -->
+        <div class="mt-6 md:mt-0 flex flex-wrap gap-2">
+          <button onclick="filterPortofolio('all')" class="port-filter-btn px-4 py-2 rounded-lg text-xs font-bold bg-brand-orange text-white transition-all shadow-sm" data-category="all">Semua</button>
+          <button onclick="filterPortofolio('blasting')" class="port-filter-btn px-4 py-2 rounded-lg text-xs font-bold bg-slate-800 text-slate-300 hover:text-white transition-all" data-category="blasting">Vapor &amp; Sandblasting</button>
+          <button onclick="filterPortofolio('fabrikasi')" class="port-filter-btn px-4 py-2 rounded-lg text-xs font-bold bg-slate-800 text-slate-300 hover:text-white transition-all" data-category="fabrikasi">Fabrikasi &amp; Las</button>
+          <button onclick="filterPortofolio('maintenance')" class="port-filter-btn px-4 py-2 rounded-lg text-xs font-bold bg-slate-800 text-slate-300 hover:text-white transition-all" data-category="maintenance">Maintenance Mesin</button>
+        </div>
+      </div>
+
+      <!-- Grid Portofolio Items -->
+      <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Item 1: Vapor Blasting -->
+        <div class="portfolio-item glass-card rounded-xl overflow-hidden flex flex-col justify-between" data-category="blasting">
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2.5 py-1 text-[11px] font-bold rounded bg-brand-orange/20 text-brand-orange border border-brand-orange/30">Vapor Blasting</span>
+              <span class="text-xs text-slate-400">Restorasi Presisi</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Restorasi Blok Mesin &amp; Komponen Karburator</h3>
+            <p class="text-slate-300 text-xs leading-relaxed mb-4">
+              Pembersihan kerak karbon oli dan oksidasi membandel menggunakan micro-bead bertekanan air. Hasil permukaan satin halus seragam tanpa merusak drat ulir atau kepresisian lubang silinder.
+            </p>
+            <div class="bg-slate-900/80 p-3 rounded-lg border border-slate-800 text-xs text-slate-400 space-y-1">
+              <div><strong class="text-slate-300">Material:</strong> Aluminium Die-Cast &amp; Alloy</div>
+              <div><strong class="text-slate-300">Metode:</strong> Eco Wet Vapor Blasting</div>
+              <div><strong class="text-slate-300">Hasil:</strong> Bebas residu, siap rakit langsung</div>
+            </div>
+          </div>
+          <div class="p-4 bg-slate-900/50 border-t border-white/5 flex items-center justify-between text-xs">
+            <span class="text-emerald-400 font-semibold flex items-center">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 inline-block mr-1.5"></span> Selesai &amp; Lolos QC
+            </span>
+            <button onclick="pilihLayananRFQ('Fabrikasi', 'Restorasi Vapor Blasting Blok Mesin')" class="text-brand-orange hover:underline font-bold">Ajukan Serupa →</button>
+          </div>
+        </div>
+
+        <!-- Item 2: Sandblasting Karat Berat -->
+        <div class="portfolio-item glass-card rounded-xl overflow-hidden flex flex-col justify-between" data-category="blasting">
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2.5 py-1 text-[11px] font-bold rounded bg-amber-500/20 text-amber-400 border border-amber-500/30">Sandblasting</span>
+              <span class="text-xs text-slate-400">Heavy Industrial</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Stripping Karat &amp; Profiling Tangki 5000L</h3>
+            <p class="text-slate-300 text-xs leading-relaxed mb-4">
+              Pengupasan kerak korosi tebal pada struktur tangki penyimpanan kimia industri hingga mencapai standar kebersihan permukaan Sa 2.5 sebelum proses pelapisan cat epoxy primer.
+            </p>
+            <div class="bg-slate-900/80 p-3 rounded-lg border border-slate-800 text-xs text-slate-400 space-y-1">
+              <div><strong class="text-slate-300">Standar:</strong> ISO 8501-1 Sa 2.5</div>
+              <div><strong class="text-slate-300">Kapasitas:</strong> Tangki Volume 5.000 Liter</div>
+              <div><strong class="text-slate-300">Tahap Lanjut:</strong> Epoxy Coating 200 Micron</div>
+            </div>
+          </div>
+          <div class="p-4 bg-slate-900/50 border-t border-white/5 flex items-center justify-between text-xs">
+            <span class="text-emerald-400 font-semibold flex items-center">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 inline-block mr-1.5"></span> Selesai &amp; Lolos QC
+            </span>
+            <button onclick="pilihLayananRFQ('Fabrikasi', 'Sandblasting Tangki Industri')" class="text-brand-orange hover:underline font-bold">Ajukan Serupa →</button>
+          </div>
+        </div>
+
+        <!-- Item 3: Fabrikasi Kanopi & Pagar -->
+        <div class="portfolio-item glass-card rounded-xl overflow-hidden flex flex-col justify-between" data-category="fabrikasi">
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2.5 py-1 text-[11px] font-bold rounded bg-blue-500/20 text-blue-400 border border-blue-500/30">Fabrikasi</span>
+              <span class="text-xs text-slate-400">Arsitektural</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Kanopi Alderon &amp; Pagar Gerbang Gudang</h3>
+            <p class="text-slate-300 text-xs leading-relaxed mb-4">
+              Fabrikasi kanopi loading bay bentang 8 meter dengan rangka WF mini dikombinasikan pipa hollow galvanis tebal, serta gerbang dorong sistem rel double bearing anti-macet.
+            </p>
+            <div class="bg-slate-900/80 p-3 rounded-lg border border-slate-800 text-xs text-slate-400 space-y-1">
+              <div><strong class="text-slate-300">Dimensi:</strong> Kanopi 8x12m + Gerbang 6x2.5m</div>
+              <div><strong class="text-slate-300">Rangka:</strong> Hollow Galvanis 40x80 tebal 1.8mm</div>
+              <div><strong class="text-slate-300">Finishing:</strong> Cat Duco Semi-Gloss Hitam</div>
+            </div>
+          </div>
+          <div class="p-4 bg-slate-900/50 border-t border-white/5 flex items-center justify-between text-xs">
+            <span class="text-emerald-400 font-semibold flex items-center">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 inline-block mr-1.5"></span> Terpasang Kokoh
+            </span>
+            <button onclick="pilihLayananRFQ('Fabrikasi', 'Fabrikasi Kanopi & Pagar Gudang')" class="text-brand-orange hover:underline font-bold">Ajukan Serupa →</button>
+          </div>
+        </div>
+
+        <!-- Item 4: Pengelasan Presisi & Tralis -->
+        <div class="portfolio-item glass-card rounded-xl overflow-hidden flex flex-col justify-between" data-category="fabrikasi">
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2.5 py-1 text-[11px] font-bold rounded bg-blue-500/20 text-blue-400 border border-blue-500/30">Pengelasan</span>
+              <span class="text-xs text-slate-400">Struktur &amp; Pengaman</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Pengelasan Presisi Pipa &amp; Set Tralis Jendela</h3>
+            <p class="text-slate-300 text-xs leading-relaxed mb-4">
+              Pengerjaan sambungan flange pipa bertekanan dengan las TIG Argon, serta pembuatan 24 unit tralis jendela motif minimalis geometris dengan akurasi sudut 90 derajat sempurna.
+            </p>
+            <div class="bg-slate-900/80 p-3 rounded-lg border border-slate-800 text-xs text-slate-400 space-y-1">
+              <div><strong class="text-slate-300">Las:</strong> GTAW / TIG Argon Full Penetration</div>
+              <div><strong class="text-slate-300">Item:</strong> 24 Unit Tralis + Manifold Pipa</div>
+              <div><strong class="text-slate-300">Inspeksi:</strong> Dye Penetrant Test Bebas Cacat</div>
+            </div>
+          </div>
+          <div class="p-4 bg-slate-900/50 border-t border-white/5 flex items-center justify-between text-xs">
+            <span class="text-emerald-400 font-semibold flex items-center">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 inline-block mr-1.5"></span> Lulus Uji Kedap
+            </span>
+            <button onclick="pilihLayananRFQ('Fabrikasi', 'Pengelasan Presisi & Tralis')" class="text-brand-orange hover:underline font-bold">Ajukan Serupa →</button>
+          </div>
+        </div>
+
+        <!-- Item 5: Overhaul Alat Berat -->
+        <div class="portfolio-item glass-card rounded-xl overflow-hidden flex flex-col justify-between" data-category="maintenance">
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2.5 py-1 text-[11px] font-bold rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">Maintenance</span>
+              <span class="text-xs text-slate-400">Alat Berat</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Overhaul Silinder Hidrolik &amp; Servis Excavator</h3>
+            <p class="text-slate-300 text-xs leading-relaxed mb-4">
+              Pembongkaran dan peremajaan piston silinder boom excavator kelas 20 ton, penggantian seal kit poliuretan tahan panas, dan kalibrasi valve relief control utama.
+            </p>
+            <div class="bg-slate-900/80 p-3 rounded-lg border border-slate-800 text-xs text-slate-400 space-y-1">
+              <div><strong class="text-slate-300">Unit:</strong> Excavator Kelas 20 Ton</div>
+              <div><strong class="text-slate-300">Kendala Awal:</strong> Kebocoran Internal &amp; Tekanan Turun</div>
+              <div><strong class="text-slate-300">Hasil:</strong> Tekanan kembali normal 320 Bar</div>
+            </div>
+          </div>
+          <div class="p-4 bg-slate-900/50 border-t border-white/5 flex items-center justify-between text-xs">
+            <span class="text-emerald-400 font-semibold flex items-center">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 inline-block mr-1.5"></span> Operasional Optimal
+            </span>
+            <button onclick="pilihLayananRFQ('Maintenance', 'Servis Silinder Hidrolik Alat Berat')" class="text-brand-orange hover:underline font-bold">Ajukan Serupa →</button>
+          </div>
+        </div>
+
+        <!-- Item 6: Maintenance & Tuning Genset -->
+        <div class="portfolio-item glass-card rounded-xl overflow-hidden flex flex-col justify-between" data-category="maintenance">
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2.5 py-1 text-[11px] font-bold rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">Maintenance</span>
+              <span class="text-xs text-slate-400">Daya Genset</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Servis Berkala &amp; Tuning Genset 150 kVA</h3>
+            <p class="text-slate-300 text-xs leading-relaxed mb-4">
+              Perawatan menyeluruh genset standby fasilitas pergudangan: kalibrasi AVR, penyetelan celah klep mesin, pergantian seluruh filter oli &amp; solar, serta pengujian beban penuh 100%.
+            </p>
+            <div class="bg-slate-900/80 p-3 rounded-lg border border-slate-800 text-xs text-slate-400 space-y-1">
+              <div><strong class="text-slate-300">Kapasitas:</strong> Genset Silent 150 kVA</div>
+              <div><strong class="text-slate-300">Pekerjaan:</strong> Full Tune-up &amp; ATS Panel Check</div>
+              <div><strong class="text-slate-300">Uji Beban:</strong> 100% Load-Bank Test Lolos</div>
+            </div>
+          </div>
+          <div class="p-4 bg-slate-900/50 border-t border-white/5 flex items-center justify-between text-xs">
+            <span class="text-emerald-400 font-semibold flex items-center">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 inline-block mr-1.5"></span> Siaga Beroperasi
+            </span>
+            <button onclick="pilihLayananRFQ('Maintenance', 'Servis & Tuning Genset 150 kVA')" class="text-brand-orange hover:underline font-bold">Ajukan Serupa →</button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= ALUR KERJA (4-STEP WORKFLOW) ================= -->
+  <section id="alur-kerja" class="py-16 bg-[#0E1526] border-y border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs uppercase tracking-widest text-brand-orange font-bold">TRANSPARANSI PROSES</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-1">Alur Kerja Sama yang Jelas &amp; Terukur</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
+        
+        <!-- Step 1 -->
+        <div class="glass-card p-6 rounded-xl relative">
+          <div class="text-4xl font-extrabold text-brand-orange/30 mb-3">01</div>
+          <h3 class="text-lg font-bold text-white mb-2">Permintaan RFQ</h3>
+          <p class="text-slate-400 text-sm">
+            Kirimkan detail kebutuhan fabrikasi atau kendala mesin Anda melalui form website atau WhatsApp resmi.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="glass-card p-6 rounded-xl relative">
+          <div class="text-4xl font-extrabold text-brand-orange/30 mb-3">02</div>
+          <h3 class="text-lg font-bold text-white mb-2">Survei &amp; Estimasi</h3>
+          <p class="text-slate-400 text-sm">
+            Tim estimator kami menganalisis spesifikasi dimensi, material, atau inspeksi unit di workshop/lapangan.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="glass-card p-6 rounded-xl relative">
+          <div class="text-4xl font-extrabold text-brand-orange/30 mb-3">03</div>
+          <h3 class="text-lg font-bold text-white mb-2">Pengerjaan Workshop</h3>
+          <p class="text-slate-400 text-sm">
+            Eksekusi pengerjaan dengan standar ketat (pengelasan, blasting, atau perbaikan mesin) sesuai jadwal disepakati.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="glass-card p-6 rounded-xl relative">
+          <div class="text-4xl font-extrabold text-brand-orange/30 mb-3">04</div>
+          <h3 class="text-lg font-bold text-white mb-2">Quality Check &amp; Serah</h3>
+          <p class="text-slate-400 text-sm">
+            Pemeriksaan presisi akhir bersama Anda, uji fungsi operasional, serah terima unit, dan jaminan purna jual.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FORMULIR PERMINTAAN PENAWARAN (SMART RFQ FORM) ================= -->
+  <section id="form-rfq" class="py-20 bg-[#0B1120] relative">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Box Form Utama -->
+      <div class="bg-gradient-to-b from-[#1E293B] to-[#0F172A] rounded-2xl border border-white/10 p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+        
+        <!-- Aksen Dekoratif -->
+        <div class="absolute -top-24 -right-24 w-60 h-60 bg-brand-orange/15 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="text-center mb-8">
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-brand-orange/20 text-brand-orange mb-3 border border-brand-orange/30">
+            FORMULIR RESMI B2B &amp; PERORANGAN
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Ajukan Permintaan Penawaran Harga (RFQ)</h2>
+          <p class="text-slate-400 text-sm mt-2 max-w-xl mx-auto">
+            Dapatkan proposal estimasi biaya yang transparan dan kompetitif. Data Anda akan langsung tersimpan di sistem internal dan terhubung ke WhatsApp estimator kami.
+          </p>
+        </div>
+
+        <form id="rfq-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            
+            <!-- Nama Klien -->
+            <div>
+              <label for="namaKlien" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
+                Nama Lengkap Anda <span class="text-brand-orange">*</span>
+              </label>
+              <input type="text" id="namaKlien" name="namaKlien" required placeholder="Contoh: Bapak Ridwan" class="w-full px-4 py-3 rounded-lg bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange transition-all text-sm">
+            </div>
+
+            <!-- Nama Perusahaan / Instansi -->
+            <div>
+              <label for="namaPerusahaan" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
+                Perusahaan / Instansi <span class="text-slate-500 text-xs normal-case">(Opsional)</span>
+              </label>
+              <input type="text" id="namaPerusahaan" name="namaPerusahaan" placeholder="Contoh: PT Sulawesi Logam / Perorangan" class="w-full px-4 py-3 rounded-lg bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange transition-all text-sm">
+            </div>
+
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            
+            <!-- No WhatsApp -->
+            <div>
+              <label for="noWhatsApp" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
+                Nomor WhatsApp Aktif <span class="text-brand-orange">*</span>
+              </label>
+              <input type="tel" id="noWhatsApp" name="noWhatsApp" required placeholder="Contoh: 081234567890" class="w-full px-4 py-3 rounded-lg bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange transition-all text-sm">
+            </div>
+
+            <!-- Divisi Layanan -->
+            <div>
+              <label for="divisiLayanan" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
+                Divisi Layanan yang Dipilih <span class="text-brand-orange">*</span>
+              </label>
+              <select id="divisiLayanan" name="divisiLayanan" required class="w-full px-4 py-3 rounded-lg bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange transition-all text-sm">
+                <option value="Fabrikasi">Divisi Fabrikasi (Pengelasan, Blasting, Pagar, Kanopi)</option>
+                <option value="Maintenance">Divisi Maintenance (Mobil, Alat Berat, Genset)</option>
+                <option value="Gabungan">Layanan Gabungan / Konsultasi Proyek Khusus</option>
+              </select>
+            </div>
+
+          </div>
+
+          <!-- Rincian Spesifikasi Kebutuhan -->
+          <div>
+            <label for="spesifikasiKebutuhan" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
+              Rincian Kebutuhan &amp; Estimasi Ukuran/Keluhan <span class="text-brand-orange">*</span>
+            </label>
+            <textarea id="spesifikasiKebutuhan" name="spesifikasiKebutuhan" rows="4" required placeholder="Jelaskan kebutuhan Anda, misal: 'Butuh vapor blasting part mesin motor 5 unit' atau 'Pembuatan kanopi spandek 4x6 meter di daerah Paccerakkang' atau 'Overhaul genset 60 kVA'." class="w-full px-4 py-3 rounded-lg bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange transition-all text-sm"></textarea>
+          </div>
+
+          <!-- Tombol Aksi Submit Form -->
+          <div class="pt-2">
+            <button id="btn-submit-rfq" type="submit" class="w-full py-4 px-6 rounded-lg font-bold text-white bg-brand-orange hover:bg-brand-orangeDark transition-all flex items-center justify-center space-x-2 shadow-xl shadow-brand-orange/30 disabled:opacity-60 disabled:cursor-not-allowed">
+              <span id="btn-submit-text">Kirim Permintaan &amp; Dapatkan Penawaran via WhatsApp</span>
+              <svg id="btn-submit-icon" class="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              <div id="btn-submit-spinner" class="hidden w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+            </button>
+            <p class="text-center text-xs text-slate-400 mt-3">
+              🔒 Data Anda aman dan hanya digunakan oleh tim estimator WD.Project untuk keperluan kalkulasi penawaran.
+            </p>
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= LOKASI WORKSHOP & KONTAK RESMI ================= -->
+  <section id="lokasi-kontak" class="py-16 bg-[#0E1526] border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Info Kontak & Alamat -->
+        <div class="lg:col-span-5 space-y-6">
+          <span class="text-xs uppercase tracking-widest text-brand-orange font-bold">KUNJUNGI WORKSHOP KAMI</span>
+          <h2 class="text-3xl font-extrabold text-white">Workshop &amp; Pusat Operasional WD.Project</h2>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Silakan datang langsung ke workshop kami untuk konsultasi teknis, melihat sampel hasil vapor blasting, atau menjadwalkan survei ke lokasi pabrik/proyek Anda.
+          </p>
+
+          <div class="space-y-4 pt-2">
+            <div class="flex items-start space-x-3.5">
+              <div class="w-10 h-10 rounded-lg bg-brand-orange/20 text-brand-orange flex items-center justify-center shrink-0 mt-0.5">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              </div>
+              <div>
+                <h4 class="text-white font-semibold text-sm">Alamat Lengkap</h4>
+                <p class="text-slate-400 text-xs mt-0.5 leading-relaxed">
+                  Jl. Balang Turungan, Paccerakkang, Kec. Biringkanaya, Kota Makassar, Sulawesi Selatan, 90241
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-3.5">
+              <div class="w-10 h-10 rounded-lg bg-brand-orange/20 text-brand-orange flex items-center justify-center shrink-0 mt-0.5">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              </div>
+              <div>
+                <h4 class="text-white font-semibold text-sm">WhatsApp / Telepon</h4>
+                <p class="text-slate-400 text-xs mt-0.5">
+                  <a href="https://wa.me/6282292489480" class="text-brand-orange hover:underline font-semibold">+62 822-9248-9480</a> (Respon Cepat)
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-3.5">
+              <div class="w-10 h-10 rounded-lg bg-brand-orange/20 text-brand-orange flex items-center justify-center shrink-0 mt-0.5">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <div>
+                <h4 class="text-white font-semibold text-sm">Jam Operasional</h4>
+                <p class="text-slate-400 text-xs mt-0.5">
+                  Senin - Sabtu: 08:00 - 17:00 WITA (Minggu &amp; Darurat On-Call)
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-2">
+            <a href="https://maps.google.com/?q=Jl.+Balang+Turungan+Paccerakkang+Biringkanaya+Makassar" target="_blank" class="inline-flex items-center text-sm font-semibold text-brand-orange hover:text-white transition-colors">
+              Buka Panduan Rute di Google Maps
+              <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Kartu Visual Peta & Workshop -->
+        <div class="lg:col-span-7">
+          <div class="glass-card rounded-2xl p-4 overflow-hidden border border-white/10 shadow-xl">
+            <div class="relative w-full h-80 rounded-xl bg-slate-900 flex flex-col items-center justify-center p-6 text-center border border-slate-800">
+              <div class="w-16 h-16 rounded-full bg-brand-orange/20 text-brand-orange flex items-center justify-center mb-4">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-1">Workshop WD.Project Makassar</h3>
+              <p class="text-slate-400 text-xs max-w-md mb-5">
+                Kecamatan Biringkanaya, Kota Makassar (Akses strategis dekat kawasan industri &amp; pergudangan).
+              </p>
+              <a href="https://maps.google.com/?q=Jl.+Balang+Turungan+Paccerakkang+Biringkanaya+Makassar" target="_blank" class="px-5 py-2.5 rounded-lg text-xs font-bold bg-brand-orange hover:bg-brand-orangeDark text-white shadow-md transition-all">
+                Buka Navigasi GPS Google Maps
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-[#070B14] border-t border-white/10 py-12 text-slate-400 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        
+        <div class="space-y-3 md:col-span-2">
+          <div class="bg-white inline-block px-3 py-1.5 rounded-lg border border-white/20 shadow-sm">
+            <img src="assets/logo.png" alt="WD.Project" class="h-8 w-auto object-contain" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'font-extrabold text-lg text-black\'>W<span class=\'text-orange-500\'>D</span>.Project</span>';">
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed max-w-md">
+            Pusat fabrikasi logam presisi, vapor blasting, sandblasting industri, dan spesialis maintenance alat berat, armada mobil, serta genset di Makassar, Sulawesi Selatan.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-3">Divisi Fabrikasi</h4>
+          <ul class="text-xs space-y-2">
+            <li><a href="#divisi-layanan" class="hover:text-brand-orange transition-colors">Vapor Blasting (Wet Blasting)</a></li>
+            <li><a href="#divisi-layanan" class="hover:text-brand-orange transition-colors">Sandblasting Karat Berat</a></li>
+            <li><a href="#divisi-layanan" class="hover:text-brand-orange transition-colors">Pengelasan MIG / TIG / MMA</a></li>
+            <li><a href="#divisi-layanan" class="hover:text-brand-orange transition-colors">Pagar, Kanopi &amp; Tralis</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-3">Divisi Maintenance</h4>
+          <ul class="text-xs space-y-2">
+            <li><a href="#divisi-layanan" class="hover:text-brand-orange transition-colors">Overhaul Alat Berat</a></li>
+            <li><a href="#divisi-layanan" class="hover:text-brand-orange transition-colors">Servis &amp; Tuning Genset</a></li>
+            <li><a href="#divisi-layanan" class="hover:text-brand-orange transition-colors">Perawatan Armada Mobil</a></li>
+            <li><a href="#divisi-layanan" class="hover:text-brand-orange transition-colors">Layanan Panggilan Lapangan</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+        <div>
+          &copy; <span id="current-year"></span> WD.Project (Fabrication &amp; Maintenance). Hak Cipta Dilindungi.
+        </div>
+        <div>
+          Sistem Rekayasa &amp; Arsitektur oleh <span class="text-brand-orange font-semibold">ZettBOT (by Zettbos)</span>.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= CUSTOM TOAST NOTIFICATION (ANTI-ALERT) ================= -->
+  <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col space-y-3 pointer-events-none"></div>
+
+  <!-- ================= CLIENT JAVASCRIPT LOGIC ================= -->
+  <script>
+    // Set Tahun Sekarang Dinamis
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // Mobile Menu Toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', function() {
+        const isClosed = mobileMenu.classList.contains('hidden');
+        if (isClosed) {
+          mobileMenu.classList.remove('hidden');
+          hamburgerIcon.classList.add('hidden');
+          closeIcon.classList.remove('hidden');
+        } else {
+          mobileMenu.classList.add('hidden');
+          hamburgerIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+        }
+      });
+
+      // Tutup menu saat link diklik
+      document.querySelectorAll('.mobile-nav-link').forEach(function(link) {
+        link.addEventListener('click', function() {
+          mobileMenu.classList.add('hidden');
+          hamburgerIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+        });
+      });
+    }
+
+    // Filter Kategori Portofolio Proyek
+    function filterPortofolio(category) {
+      const items = document.querySelectorAll('.portfolio-item');
+      const buttons = document.querySelectorAll('.port-filter-btn');
+
+      buttons.forEach(function(btn) {
+        if (btn.getAttribute('data-category') === category) {
+          btn.className = 'port-filter-btn px-4 py-2 rounded-lg text-xs font-bold bg-brand-orange text-white transition-all shadow-sm';
+        } else {
+          btn.className = 'port-filter-btn px-4 py-2 rounded-lg text-xs font-bold bg-slate-800 text-slate-300 hover:text-white transition-all';
+        }
+      });
+
+      items.forEach(function(item) {
+        if (category === 'all' || item.getAttribute('data-category') === category) {
+          item.classList.remove('hidden');
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+    }
+
+    // Switcher Tab Divisi Fabrikasi vs Maintenance
+    function switchDivision(divisi) {
+      const btnFabrikasi = document.getElementById('tab-btn-fabrikasi');
+      const btnMaintenance = document.getElementById('tab-btn-maintenance');
+      const contentFabrikasi = document.getElementById('content-fabrikasi');
+      const contentMaintenance = document.getElementById('content-maintenance');
+
+      if (divisi === 'fabrikasi') {
+        btnFabrikasi.className = 'tab-active px-5 py-2.5 rounded-lg text-sm font-bold transition-all flex items-center';
+        btnMaintenance.className = 'tab-inactive px-5 py-2.5 rounded-lg text-sm font-bold transition-all flex items-center';
+        contentFabrikasi.classList.remove('hidden');
+        contentMaintenance.classList.add('hidden');
+      } else {
+        btnMaintenance.className = 'tab-active px-5 py-2.5 rounded-lg text-sm font-bold transition-all flex items-center';
+        btnFabrikasi.className = 'tab-inactive px-5 py-2.5 rounded-lg text-sm font-bold transition-all flex items-center';
+        contentMaintenance.classList.remove('hidden');
+        contentFabrikasi.classList.add('hidden');
+      }
+    }
+
+    // Auto-select layanan dari kartu ke form RFQ
+    function pilihLayananRFQ(divisi, namaLayanan) {
+      const selectDivisi = document.getElementById('divisiLayanan');
+      const textareaKebutuhan = document.getElementById('spesifikasiKebutuhan');
+
+      if (selectDivisi) {
+        selectDivisi.value = divisi;
+      }
+      if (textareaKebutuhan) {
+        textareaKebutuhan.value = 'Saya tertarik mengajukan penawaran untuk layanan: ' + namaLayanan + '.\nMohon estimasi biaya dan persyaratannya.';
+        textareaKebutuhan.focus();
+      }
+
+      // Smooth scroll ke formulir
+      const formSection = document.getElementById('form-rfq');
+      if (formSection) {
+        formSection.scrollIntoView({ behavior: 'smooth' });
+      }
+      showToast('Layanan "' + namaLayanan + '" dipilih. Silakan lengkapi formulir RFQ.', 'info');
+    }
+
+    // Generator ID Tiket Sekuensial Vercel (RFQ-YYYYMM-XXX)
+    function generateTicketId() {
+      const now = new Date();
+      const year = now.getFullYear();
+      const month = String(now.getMonth() + 1).padStart(2, '0');
+      const prefix = 'RFQ-' + year + month + '-';
+      
+      const storageKey = 'wd_last_ticket_seq_' + year + month;
+      let lastSeq = parseInt(localStorage.getItem(storageKey) || '0', 10);
+      lastSeq += 1;
+      localStorage.setItem(storageKey, lastSeq.toString());
+
+      return prefix + String(lastSeq).padStart(3, '0');
+    }
+
+    // Penanganan Formulir RFQ (Anti-Deadlock & Vercel Optimized)
+    function handleFormSubmit(event) {
+      event.preventDefault();
+
+      const btnSubmit = document.getElementById('btn-submit-rfq');
+      const btnText = document.getElementById('btn-submit-text');
+      const btnIcon = document.getElementById('btn-submit-icon');
+      const btnSpinner = document.getElementById('btn-submit-spinner');
+
+      // Ekstraksi Nilai Primitif Murni
+      const payload = {
+        namaKlien: document.getElementById('namaKlien').value.trim(),
+        namaPerusahaan: document.getElementById('namaPerusahaan').value.trim(),
+        noWhatsApp: document.getElementById('noWhatsApp').value.trim(),
+        divisiLayanan: document.getElementById('divisiLayanan').value,
+        spesifikasiKebutuhan: document.getElementById('spesifikasiKebutuhan').value.trim()
+      };
+
+      // Validasi Frontend Ringkas
+      if (!payload.namaKlien || payload.namaKlien.length < 2) {
+        showToast('Mohon masukkan nama lengkap Anda.', 'error');
+        return;
+      }
+      if (!payload.noWhatsApp || payload.noWhatsApp.length < 9) {
+        showToast('Mohon masukkan nomor WhatsApp yang valid.', 'error');
+        return;
+      }
+      if (!payload.spesifikasiKebutuhan || payload.spesifikasiKebutuhan.length < 5) {
+        showToast('Mohon uraikan kebutuhan atau jenis pekerjaan minimal 5 karakter.', 'error');
+        return;
+      }
+
+      // Kunci Tombol (Loading State)
+      btnSubmit.disabled = true;
+      btnText.textContent = 'Memproses Tiket RFQ & Menghubungkan ke WhatsApp...';
+      btnIcon.classList.add('hidden');
+      btnSpinner.classList.remove('hidden');
+
+      // Helper pemulihan tombol
+      function restoreButton() {
+        btnSubmit.disabled = false;
+        btnText.textContent = 'Kirim Permintaan & Dapatkan Penawaran via WhatsApp';
+        btnIcon.classList.remove('hidden');
+        btnSpinner.classList.add('hidden');
+      }
+
+      // 1. Generate ID Tiket Otomatis
+      const ticketId = generateTicketId();
+
+      // 2. Simpan Catatan Riwayat di LocalStorage Browser
+      try {
+        const historyKey = 'wd_rfq_history';
+        const existingHistory = JSON.parse(localStorage.getItem(historyKey) || '[]');
+        existingHistory.unshift({
+          id: ticketId,
+          timestamp: new Date().toISOString(),
+          klien: payload.namaKlien,
+          perusahaan: payload.namaPerusahaan,
+          whatsapp: payload.noWhatsApp,
+          divisi: payload.divisiLayanan,
+          kebutuhan: payload.spesifikasiKebutuhan
+        });
+        localStorage.setItem(historyKey, JSON.stringify(existingHistory.slice(0, 50)));
+      } catch (e) {
+        console.warn('Storage log notice:', e);
+      }
+
+      // 3. Format Template Pesan WhatsApp Resmi WD.Project
+      const pesanWA = 'Halo Tim WD.Project Makassar,\n\n' +
+        'Saya ingin mengajukan Permintaan Penawaran Harga (RFQ) via website resmi:\n\n' +
+        '*No. Tiket RFQ:* ' + ticketId + '\n' +
+        '*Nama Klien:* ' + payload.namaKlien + '\n' +
+        '*Perusahaan/Instansi:* ' + (payload.namaPerusahaan || '-') + '\n' +
+        '*No. WhatsApp:* ' + payload.noWhatsApp + '\n' +
+        '*Divisi Layanan:* ' + payload.divisiLayanan + '\n\n' +
+        '*Rincian Kebutuhan:* \n"' + payload.spesifikasiKebutuhan + '"\n\n' +
+        'Mohon informasi estimasi biaya dan jadwal survei/workshop. Terima kasih.';
+
+      const waUrl = 'https://wa.me/6282292489480?text=' + encodeURIComponent(pesanWA);
+
+      // 4. Umpan Balik UI Instan & Redirect WhatsApp
+      setTimeout(function() {
+        restoreButton();
+        showToast('Tiket ' + ticketId + ' berhasil dibuat! Membuka WhatsApp resmi...', 'success');
+        document.getElementById('rfq-form').reset();
+
+        setTimeout(function() {
+          window.open(waUrl, '_blank');
+        }, 600);
+      }, 700);
+    }
+
+    // Custom Toast Notification (Anti-Alert Bawaan Browser)
+    function showToast(message, type) {
+      const container = document.getElementById('toast-container');
+      if (!container) return;
+
+      const toast = document.createElement('div');
+      toast.className = 'pointer-events-auto flex items-center space-x-3 px-4 py-3 rounded-lg shadow-xl text-sm font-semibold transition-all transform translate-y-2 opacity-0 duration-200 border';
+
+      let bgClass = 'bg-slate-900 text-slate-100 border-slate-700';
+      let iconSvg = '<svg class="w-5 h-5 text-blue-400 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/></svg>';
+
+      if (type === 'success') {
+        bgClass = 'bg-[#064E3B] text-emerald-100 border-emerald-600/40';
+        iconSvg = '<svg class="w-5 h-5 text-emerald-400 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>';
+      } else if (type === 'error') {
+        bgClass = 'bg-[#7F1D1D] text-red-100 border-red-600/40';
+        iconSvg = '<svg class="w-5 h-5 text-red-400 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/></svg>';
+      }
+
+      toast.className += ' ' + bgClass;
+      toast.innerHTML = iconSvg + '<span>' + message + '</span>';
+
+      container.appendChild(toast);
+
+      // Trigger animation
+      setTimeout(function() {
+        toast.classList.remove('translate-y-2', 'opacity-0');
+      }, 20);
+
+      // Auto dismiss
+      setTimeout(function() {
+        toast.classList.add('translate-y-2', 'opacity-0');
+        setTimeout(function() {
+          if (toast.parentElement) toast.parentElement.removeChild(toast);
+        }, 200);
+      }, 4500);
+    }
+  </script>
+
+</body>
+</html>
