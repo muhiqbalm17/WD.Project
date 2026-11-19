@@ -165,17 +165,19 @@ Website dirancang dengan 8 seksi utama berstandar website manufaktur B2B:
 ZONA BAWAH: MASTER CONTEXT & LOGIKA SISTEM TERKINI (LIVING CONTEXT)
 ================================================================================
 - **Status Arsitektur Aktif:** Next.js 14 App Router + Tailwind CSS (Vercel Native Deployment, SSR/SSG, Global Edge CDN, SSL Otomatis).
-- **Konfigurasi Framework:** `next.config.mjs`, `tailwind.config.mjs`, `postcss.config.mjs`, `package.json`.
+- **Tema Visual Aktif:** Modern B2B Light / White Theme (Background `#FFFFFF` & `#F8FAFC`, tipografi tajam Slate `#0F172A`, aksen Safety Orange `#F97316`).
+- **Konfigurasi Framework:** `next.config.js`, `tailwind.config.js`, `postcss.config.js`, `package.json`.
 - **Identitas Brand Aktif:** WD.Project (Fabrication & Maintenance).
 - **Nomor Layanan Resmi:** +62 822-9248-9480.
 - **Lokasi Fisik:** Jl. Balang Turungan, Paccerakkang, Kec. Biringkanaya, Kota Makassar, Sulawesi Selatan, 90241.
-- **Aset Visual:** Logo resmi tersimpan di `public/assets/logo.png`.
+- **Aset Visual:** Logo resmi transparan tanpa latar kotak tersimpan di `public/assets/logo.png`.
 - **Logika Alur RFQ Terkini:**
   * Penomoran tiket otomatis `RFQ-YYYYMM-XXX` dihitung sekuensial secara client-side via LocalStorage.
   * Penyimpanan histori prospek lokal browser (`wd_rfq_history`).
   * Direct Click-to-Chat WhatsApp API ke nomor admin resmi dengan format pesan proposal siap kirim.
   * 0ms cold-start, kebal terhadap downtime pihak ketiga.
 - **Riwayat Log Pembaruan:**
+  * *v1.3 (2026-11-19):* Penerapan tema latar putih (Light Theme) secara menyeluruh pada semua komponen antarmuka, penghapusan latar kotak putih pada logo sehingga menjadi transparan murni, dan penjaminan nol perubahan script fungsional.
   * *v1.2 (2026-11-19):* Migrasi penuh ke arsitektur Next.js 14 App Router, pemecahan 9 komponen modular UI, pembersihan berkas lama (index.html statis, Google Apps Script setup.gs/code.gs), serta pembaruan panduan deploy.
   * *v1.1 (2026-11-19):* Migrasi arsitektur dari Google Apps Script ke Vercel Jamstack Platform sesuai instruksi pengguna.
   * *v1.0 (2026-11-18):* Inisiasi rancangan spesifikasi sistem PRD untuk website WD.Project mengacu pada referensi manufaktur American Eagle B2B dan logo resmi.

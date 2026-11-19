@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 
 const NAV_LINKS = [
   { label: 'Beranda', href: '#beranda' },
@@ -19,7 +18,7 @@ export default function Navbar() {
   return (
     <>
       {/* Top Bar */}
-      <div className="bg-gradient-to-r from-brand-slate via-brand-slateCard to-brand-slate border-b border-white/10 text-xs py-2 px-4 text-slate-300">
+      <div className="bg-slate-900 border-b border-slate-800 text-xs py-2 px-4 text-slate-300">
         <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
           <div className="flex items-center space-x-3">
             <span className="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-brand-orange/20 text-brand-orange border border-brand-orange/30">
@@ -45,26 +44,26 @@ export default function Navbar() {
       </div>
 
       {/* Main Navbar */}
-      <header className="sticky top-0 z-50 bg-[#0B1120]/90 backdrop-blur-md border-b border-white/10">
+      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
 
-            {/* Logo */}
+            {/* Logo (Latar Putih Dihilangkan, Natural & Transparan) */}
             <a href="#beranda" className="flex items-center group py-2">
-              <div className="bg-white px-2.5 py-1.5 rounded-lg border border-white/20 shadow-sm flex items-center justify-center">
+              <div className="flex items-center justify-center">
                 <Image
                   src="/assets/logo.png"
                   alt="WD.Project Logo"
-                  width={120}
-                  height={36}
-                  className="h-9 w-auto object-contain"
+                  width={140}
+                  height={42}
+                  className="h-10 w-auto object-contain"
                   priority
                 />
               </div>
             </a>
 
             {/* Desktop Nav */}
-            <nav className="hidden lg:flex items-center space-x-8 text-sm font-medium text-slate-300">
+            <nav className="hidden lg:flex items-center space-x-8 text-sm font-medium text-slate-700">
               {NAV_LINKS.map((link) => (
                 <a key={link.href} href={link.href} className="hover:text-brand-orange transition-colors">
                   {link.label}
@@ -76,7 +75,7 @@ export default function Navbar() {
             <div className="hidden sm:flex">
               <a
                 href="#form-rfq"
-                className="inline-flex items-center px-4 py-2.5 rounded-lg text-sm font-bold bg-brand-orange hover:bg-brand-orangeDark text-white shadow-lg shadow-brand-orange/20 transition-all hover:-translate-y-0.5"
+                className="inline-flex items-center px-4 py-2.5 rounded-lg text-sm font-bold bg-brand-orange hover:bg-brand-orangeDark text-white shadow-md shadow-brand-orange/20 transition-all hover:-translate-y-0.5"
               >
                 <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -88,7 +87,7 @@ export default function Navbar() {
             {/* Mobile Hamburger */}
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="lg:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800"
+              className="lg:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100"
               aria-label="Toggle Navigation"
             >
               {menuOpen ? (
@@ -106,13 +105,13 @@ export default function Navbar() {
 
         {/* Mobile Drawer */}
         {menuOpen && (
-          <div className="lg:hidden border-b border-white/10 bg-[#0F172A] px-4 pt-2 pb-6 space-y-2">
+          <div className="lg:hidden border-b border-slate-200 bg-white px-4 pt-2 pb-6 space-y-2 shadow-lg">
             {NAV_LINKS.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className="block px-3 py-2.5 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-brand-orange transition-colors"
+                className="block px-3 py-2.5 rounded-md text-base font-medium text-slate-800 hover:bg-slate-50 hover:text-brand-orange transition-colors"
               >
                 {link.label}
               </a>
@@ -132,4 +131,3 @@ export default function Navbar() {
     </>
   );
 }
-

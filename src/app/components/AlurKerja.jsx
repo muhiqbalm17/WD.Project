@@ -7,20 +7,20 @@ const STEPS = [
 
 export default function AlurKerja() {
   return (
-    <section id="alur-kerja" className="py-16 bg-brand-bgAlt border-y border-white/5">
+    <section id="alur-kerja" className="py-16 bg-white border-y border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="text-xs uppercase tracking-widest text-brand-orange font-bold">TRANSPARANSI PROSES</span>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-white mt-1">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">
             Alur Kerja Sama yang Jelas &amp; Terukur
           </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {STEPS.map((s) => (
-            <div key={s.num} className="glass-card p-6 rounded-xl">
+            <div key={s.num} className="glass-card p-6 rounded-xl bg-slate-50 border border-slate-200 shadow-sm">
               <div className="text-4xl font-extrabold text-brand-orange/30 mb-3">{s.num}</div>
-              <h3 className="text-lg font-bold text-white mb-2">{s.title}</h3>
-              <p className="text-slate-400 text-sm">{s.desc}</p>
+              <h3 className="text-lg font-bold text-slate-900 mb-2">{s.title}</h3>
+              <p className="text-slate-600 text-sm leading-relaxed">{s.desc}</p>
             </div>
           ))}
         </div>
@@ -28,4 +28,3 @@ export default function AlurKerja() {
     </section>
   );
 }
-

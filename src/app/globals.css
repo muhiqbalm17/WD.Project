@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 /* =====================================================
-   WD.PROJECT - GLOBAL STYLES
-   Industrial Dark B2B Aesthetic (Anti-AI Human-Crafted)
+   WD.PROJECT - GLOBAL STYLES (LIGHT / WHITE THEME)
+   Industrial Modern B2B Aesthetic
    ===================================================== */
 
 :root {
-  --bg-primary: #0B1120;
-  --bg-alt: #0E1526;
+  --bg-primary: #FFFFFF;
+  --bg-alt: #F8FAFC;
   --brand-orange: #F97316;
   --brand-orange-dark: #EA580C;
 }
@@ -20,14 +20,14 @@ html {
 
 body {
   background-color: var(--bg-primary);
-  color: #F8FAFC;
+  color: #0F172A;
   overflow-x: hidden;
 }
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: #0B1120; }
-::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+::-webkit-scrollbar-track { background: #F8FAFC; }
+::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: #F97316; }
 
 /* Selection */
@@ -38,42 +38,42 @@ body {
 
 /* Grid Background Pattern */
 .grid-pattern {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(15, 23, 42, 0.05) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
-/* Hero gradient */
+/* Hero gradient (Soft Warm Light) */
 .hero-gradient {
-  background: radial-gradient(circle at 50% 20%, rgba(249, 115, 22, 0.12) 0%, rgba(15, 23, 42, 0.8) 60%, #0B1120 100%);
+  background: radial-gradient(circle at 50% 20%, rgba(249, 115, 22, 0.08) 0%, rgba(248, 250, 252, 0.9) 60%, #FFFFFF 100%);
 }
 
-/* Glass Card */
+/* Clean Card */
 .glass-card {
-  background: rgba(30, 41, 59, 0.7);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
   transition: all 0.25s ease;
 }
 
 .glass-card:hover {
-  border-color: rgba(249, 115, 22, 0.4);
+  border-color: rgba(249, 115, 22, 0.5);
   transform: translateY(-2px);
-  box-shadow: 0 12px 28px -6px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 12px 28px -6px rgba(15, 23, 42, 0.1);
 }
 
 /* Tab buttons */
 .tab-active {
   background-color: #F97316;
   color: #FFFFFF;
-  box-shadow: 0 4px 14px rgba(249, 115, 22, 0.35);
+  box-shadow: 0 4px 14px rgba(249, 115, 22, 0.3);
 }
 .tab-inactive {
-  background-color: rgba(30, 41, 59, 0.6);
-  color: #94A3B8;
+  background-color: #F1F5F9;
+  color: #475569;
 }
 .tab-inactive:hover {
-  color: #F8FAFC;
-  background-color: rgba(51, 65, 85, 0.8);
+  color: #0F172A;
+  background-color: #E2E8F0;
 }
 
 /* Toast animation */
@@ -88,4 +88,3 @@ body {
   to { transform: rotate(360deg); }
 }
 .animate-spin { animation: spin 0.8s linear infinite; }
-

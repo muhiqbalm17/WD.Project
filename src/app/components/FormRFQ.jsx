@@ -115,17 +115,17 @@ export default function FormRFQ() {
 
   return (
     <>
-      <section id="form-rfq" className="py-20 bg-brand-bg relative">
+      <section id="form-rfq" className="py-20 bg-slate-50 relative">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-b from-brand-slateCard to-brand-slate rounded-2xl border border-white/10 p-6 sm:p-10 shadow-2xl relative overflow-hidden">
-            <div className="absolute -top-24 -right-24 w-60 h-60 bg-brand-orange/15 rounded-full blur-3xl pointer-events-none" />
+          <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-10 shadow-xl relative overflow-hidden">
+            <div className="absolute -top-24 -right-24 w-60 h-60 bg-brand-orange/10 rounded-full blur-3xl pointer-events-none" />
 
             <div className="text-center mb-8">
-              <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-brand-orange/20 text-brand-orange mb-3 border border-brand-orange/30">
+              <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-brand-orange/15 text-brand-orange mb-3 border border-brand-orange/30">
                 FORMULIR RESMI B2B &amp; PERORANGAN
               </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-white">Ajukan Permintaan Penawaran Harga (RFQ)</h2>
-              <p className="text-slate-400 text-sm mt-2 max-w-xl mx-auto">
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">Ajukan Permintaan Penawaran Harga (RFQ)</h2>
+              <p className="text-slate-600 text-sm mt-2 max-w-xl mx-auto">
                 Dapatkan proposal estimasi biaya yang transparan. Data Anda akan terhubung langsung ke tim estimator melalui WhatsApp.
               </p>
             </div>
@@ -133,46 +133,46 @@ export default function FormRFQ() {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="namaKlien" className="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
+                  <label htmlFor="namaKlien" className="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-2">
                     Nama Lengkap <span className="text-brand-orange">*</span>
                   </label>
                   <input
                     id="namaKlien" name="namaKlien" type="text" required value={form.namaKlien}
                     onChange={handleChange} placeholder="Contoh: Bapak Ridwan"
-                    className="w-full px-4 py-3 rounded-lg bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange transition-all text-sm"
+                    className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange focus:bg-white transition-all text-sm"
                   />
                 </div>
                 <div>
-                  <label htmlFor="namaPerusahaan" className="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
-                    Perusahaan <span className="text-slate-500 text-xs normal-case">(Opsional)</span>
+                  <label htmlFor="namaPerusahaan" className="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-2">
+                    Perusahaan <span className="text-slate-400 text-xs normal-case">(Opsional)</span>
                   </label>
                   <input
                     id="namaPerusahaan" name="namaPerusahaan" type="text" value={form.namaPerusahaan}
                     onChange={handleChange} placeholder="Contoh: PT Sulawesi Logam / Perorangan"
-                    className="w-full px-4 py-3 rounded-lg bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange transition-all text-sm"
+                    className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange focus:bg-white transition-all text-sm"
                   />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="noWhatsApp" className="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
+                  <label htmlFor="noWhatsApp" className="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-2">
                     Nomor WhatsApp <span className="text-brand-orange">*</span>
                   </label>
                   <input
                     id="noWhatsApp" name="noWhatsApp" type="tel" required value={form.noWhatsApp}
                     onChange={handleChange} placeholder="Contoh: 081234567890"
-                    className="w-full px-4 py-3 rounded-lg bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange transition-all text-sm"
+                    className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange focus:bg-white transition-all text-sm"
                   />
                 </div>
                 <div>
-                  <label htmlFor="divisiLayanan" className="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
+                  <label htmlFor="divisiLayanan" className="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-2">
                     Divisi Layanan <span className="text-brand-orange">*</span>
                   </label>
                   <select
                     id="divisiLayanan" name="divisiLayanan" required value={form.divisiLayanan}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange transition-all text-sm"
+                    className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange focus:bg-white transition-all text-sm"
                   >
                     <option value="Fabrikasi">Divisi Fabrikasi (Blasting, Pengelasan, Pagar, Kanopi)</option>
                     <option value="Maintenance">Divisi Maintenance (Mobil, Alat Berat, Genset)</option>
@@ -182,21 +182,21 @@ export default function FormRFQ() {
               </div>
 
               <div>
-                <label htmlFor="spesifikasiKebutuhan" className="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
+                <label htmlFor="spesifikasiKebutuhan" className="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-2">
                   Rincian Kebutuhan <span className="text-brand-orange">*</span>
                 </label>
                 <textarea
                   id="spesifikasiKebutuhan" name="spesifikasiKebutuhan" rows={4} required value={form.spesifikasiKebutuhan}
                   onChange={handleChange}
                   placeholder="Jelaskan kebutuhan Anda, misal: 'Vapor blasting part mesin motor 5 unit' atau 'Kanopi spandek 4x6 meter' atau 'Overhaul genset 60 kVA'."
-                  className="w-full px-4 py-3 rounded-lg bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange transition-all text-sm"
+                  className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange focus:bg-white transition-all text-sm"
                 />
               </div>
 
               <div className="pt-2">
                 <button
                   type="submit" disabled={loading}
-                  className="w-full py-4 px-6 rounded-lg font-bold text-white bg-brand-orange hover:bg-brand-orangeDark transition-all flex items-center justify-center space-x-2 shadow-xl shadow-brand-orange/30 disabled:opacity-60 disabled:cursor-not-allowed"
+                  className="w-full py-4 px-6 rounded-lg font-bold text-white bg-brand-orange hover:bg-brand-orangeDark transition-all flex items-center justify-center space-x-2 shadow-xl shadow-brand-orange/25 disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                   {loading ? (
                     <>
@@ -212,7 +212,7 @@ export default function FormRFQ() {
                     </>
                   )}
                 </button>
-                <p className="text-center text-xs text-slate-400 mt-3">
+                <p className="text-center text-xs text-slate-500 mt-3">
                   🔒 Data Anda aman dan hanya digunakan untuk keperluan kalkulasi penawaran WD.Project.
                 </p>
               </div>
@@ -225,4 +225,3 @@ export default function FormRFQ() {
     </>
   );
 }
-
